@@ -71,7 +71,7 @@ public class DocumentController {
     }
 
     @AuthCheck
-    @DeleteMapping("/{id}")
+    @GetMapping("/delete/{id}")
     @ApiOperation("删除")
     public Boolean delete(@PathVariable("id") Long id){
         return documentService.fakeDelete(id);

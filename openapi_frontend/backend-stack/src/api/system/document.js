@@ -53,8 +53,8 @@ export function updateSystemDocument(data) {
  */
 export function deleteSystemDocument(id) {
   return request({
-    url: `/interface-service/document/{id}`,
-    method: "delete",
+    url: `/interface-service/document/delete/{id}`,
+    method: "get",
   })
 }
 
