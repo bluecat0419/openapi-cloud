@@ -1,0 +1,1 @@
+ignore.urls: /cloud/auth-service/login,/cloud/auth-service/backLogin,/cloud/auth-service/register,/cloud/auth-service/code/**,/cloud/pay-service/alipay/notifyUrl,/cloud/interface-service/home/**,/cloud/interface-service/document/common/**

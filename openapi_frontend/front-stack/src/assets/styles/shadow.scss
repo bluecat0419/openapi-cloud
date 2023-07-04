@@ -1,0 +1,25 @@
+.no-offset-projection {
+  margin-left: -6px;
+  box-shadow: 0 0 6px rgba(180, 160, 120, 0.8);
+}
+
+.unilateral-projection {
+  border-bottom: 0;
+  box-shadow: 0px 6px 5px -5px rgba(180, 160, 120, 0.6);
+}
+
+.adjacent-edge-projection {
+  border-right: 0;
+  border-bottom: 0;
+  box-shadow: 5px 5px 5px -4px rgba(180, 160, 120, 0.6);
+}
+
+.side-projection {
+  border-right: 0;
+  border-left: 0;
+  box-shadow: 6px 0 5px -5px rgba(180, 160, 120, 0.6), -6px 0 5px -5px rgba(180, 160, 120, 0.6);
+}
+
+.px-projection {
+  box-shadow: 0 0 0 1px rgba(180, 160, 120, 0.6);
+}

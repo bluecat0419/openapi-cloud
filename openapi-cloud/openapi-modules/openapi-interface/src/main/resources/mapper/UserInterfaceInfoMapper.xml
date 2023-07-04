@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zty.interfaces.mapper.UserInterfaceInfoMapper">
+
+    <select id="checkUserInterface" resultType="int">
+        select 1 from user_interface_info where (is_deleted = 0
+                                                     and status = 0
+                                                     and left_num >= 1
+                                                     and user_id=#{userId}
+                                                     and interface_info_id=#{interfaceId}) limit 1
+    </select>
+
+    <update id="reduceUserInterfaceInvokeCount">
+        UPDATE user_interface_info SET left_num = left_num-1
+        WHERE interface_info_id = #{interfaceId} AND user_id = #{userId}
+    </update>
+
+    <select id="selectByUserIdAndPackageId" resultType="com.zty.interfaces.entity.UserInterfaceInfoEntity">
+        SELECT * FROM `user_interface_info`
+        WHERE (user_id = #{userId} AND interface_info_id = (SELECT p.interface_info_id FROM interface_package as p WHERE id = #{interfacePackageId}))
+    </select>
+
+</mapper>

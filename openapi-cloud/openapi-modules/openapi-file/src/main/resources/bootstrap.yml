@@ -1,0 +1,26 @@
+server:
+  port: 8008
+  servlet:
+    context-path: /file-service
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: file-service
+  cloud:
+    nacos:
+      config:
+        server-addr: xxx:8848
+        namespace: xxx
+        file-extension: yml                # data ID的后缀：config-service.yaml
+        group: DEFAULT_GROUP                # 组名
+        # 开启nacos自动刷新，如果这个配置没有或者为false会导致配置不能自动刷新
+        auto-refresh: true
+        # 允许nacos服务端向本地同步配置
+        enable-remote-sync-config: true
+      discovery:
+        enabled: true # 如果不想使用 Nacos 进行服务注册和发现, 设置为 false 即可
+        server-addr: xxx:8848 # Nacos 服务器地址
+        # server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850 # Nacos 服务器地址
+        namespace: xxx

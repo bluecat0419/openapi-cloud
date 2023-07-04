@@ -1,0 +1,24 @@
+storage:
+  #文件存储类型
+  type: aliyun
+  #本地文件存储配置
+  local:
+    file:
+      #域名
+      domain: http://localhost:8008
+      #路径
+      path: D:/file
+  #阿里云文件存储配置
+  aliyun:
+    oss:
+      #默认文件存储路径前缀
+      prefix: xxx/
+      #桶名称
+      bucketName: xxx
+      #域节点
+      endPoint: xxx
+      #密钥
+      accessKeyId: xxx
+      accessKeySecret: xxx
+      #阿里云绑定的域名
+      domain: xxx

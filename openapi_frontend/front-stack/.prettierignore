@@ -1,0 +1,7 @@
+# Ignore icon
+src/**/*.svg
+
+# Ignore image
+**/*.jpg
+**/*.jpeg
+**/*.png

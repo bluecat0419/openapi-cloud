@@ -1,0 +1,60 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: sms
+  main:
+    allow-bean-definition-overriding: true
+  #redis配置
+  redis:
+    database: 6
+    host: xxx
+    port: 6379
+    password: xxx    # 密码（默认为空）
+    timeout: 6000ms  # 连接超时时长（毫秒）
+    jedis:
+      pool:
+        max-active: 1000  # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1ms      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 10      # 连接池中的最大空闲连接
+        min-idle: 5       # 连接池中的最小空闲连接
+  # mq配置
+  rabbitmq:
+    host: xxx
+    port: 5672
+    username: root
+    password: xxx
+    listener:
+      simple:
+        #设置手动确认消息模式
+        acknowledge-mode: manual
+  cloud:
+    nacos:
+      discovery:
+        enabled: true # 如果不想使用 Nacos 进行服务注册和发现, 设置为 false 即可
+        server-addr: xxx:8848 # Nacos 服务器地址
+        # server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850 # Nacos 服务器地址
+        namespace: xxx
+        metadata:
+          management:
+            context-path: ${server.servlet.context-path}/actuator
+
+
+#阿里云短信服务发送配置
+sms:
+  #密钥
+  accessKey: xxx
+  accessKeySecret: xxx
+  #访问域名
+  domainName: dysmsapi.aliyuncs.com
+  #短信签名
+  signName: 阿里云短信测试
+  #模板code
+  templateCode: xxx
+
+#国阳云短信服务发送配置
+gyy:
+  #短信签名 id
+  smsSignId: xxx
+  smsAppCode: xxx

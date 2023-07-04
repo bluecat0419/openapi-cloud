@@ -1,0 +1,11 @@
+# Ignore icon
+src/**/*.svg
+src/**/*.gif
+
+# Ignore image
+**/*.jpg
+**/*.jpeg
+**/*.png
+
+# Ignore folder
+dist

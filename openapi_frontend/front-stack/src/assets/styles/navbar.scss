@@ -1,0 +1,45 @@
+#app {
+  .main-container {
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 15px;
+    padding: 5px 0;
+    min-height: calc(100% - 50px);
+  }
+
+  .navbar {
+    .navbar-wrapper {
+      height: 100%;
+
+      .topmenu-container.el-menu--horizontal {
+        height: 100%;
+        box-sizing: border-box;
+        border-bottom: none;
+      }
+    }
+
+    .navbar-dropdown {
+      width: 95vw;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+
+      .active {
+        padding: 8px 4px;
+      }
+
+      .navbar-dropdown-wrapper.el-row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  .withoutAnimation {
+    .main-container,
+    .sidebar-container {
+      transition: none;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+version: '3'
+services:
+  openapi-gateway-service:
+    image: openapi/openapi-gateway-service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs/openapi-gateway:/logs/openapi-gateway
+    environment:
+      - TZ=Asia/Shanghai
+  openapi-auth-service:
+    image: openapi/openapi-auth-service
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./logs/openapi-auth:/logs/openapi-auth
+    environment:
+      - TZ=Asia/Shanghai
+  openapi-interface-service:
+    image: openapi/openapi-interface-service
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./logs/openapi-interface:/logs/openapi-interface
+    environment:
+      - TZ=Asia/Shanghai
+  openapi-api-service:
+    image: openapi/openapi-api-service
+    ports:
+      - "8003:8003"
+    volumes:
+      - ./logs/openapi-api-service:/logs/openapi-api-service
+    environment:
+      - TZ=Asia/Shanghai
+  openapi-sms-service:
+    image: openapi/openapi-sms-service
+    ports:
+      - "8005:8005"
+    volumes:
+      - ./logs/openapi-sms:/logs/openapi-sms
+    environment:
+      - TZ=Asia/Shanghai
+  openapi-pay-service:
+    image: openapi/openapi-pay-service
+    ports:
+      - "8006:8006"
+    volumes:
+      - ./logs/openapi-pay:/logs/openapi-pay
+    environment:
+      - TZ=Asia/Shanghai
+  openapi-email-service:
+    image: openapi/openapi-email-service
+    ports:
+      - "8007:8007"
+    volumes:
+      - ./logs/openapi-email:/logs/openapi-email
+    environment:
+      - TZ=Asia/Shanghai
+  openapi-file-service:
+    image: openapi/openapi-file-service
+    ports:
+      - "8008:8008"
+    volumes:
+      - ./logs/openapi-file:/logs/openapi-file
+    environment:
+      - TZ=Asia/Shanghai

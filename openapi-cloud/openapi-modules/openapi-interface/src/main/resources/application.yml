@@ -1,0 +1,91 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /interface-service
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: interface-service
+  #redis配置
+  redis:
+    database: 6
+    host: xxx
+    port: 6379
+    password: xxx    # 密码（默认为空）
+    timeout: 6000ms  # 连接超时时长（毫秒）
+    jedis:
+      pool:
+        max-active: 1000  # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1ms      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 10      # 连接池中的最大空闲连接
+        min-idle: 5       # 连接池中的最小空闲连接
+  # mq配置
+  rabbitmq:
+    host: xxx
+    port: 5672
+    username: root
+    password: xxx
+    listener:
+      simple:
+        #消息重试机制
+        retry:
+          enabled: true
+          max-attempts: 3 #最大重试次数
+          initial-interval: 3000 #重试间隔时间（单位毫秒）
+    #开启消息确认回调机制
+    publisher-confirm-type: correlated
+  cloud:
+    sentinel:
+      transport:
+        port: 9003
+        dashboard: localhost:7777
+    nacos:
+      discovery:
+        enabled: true # 如果不想使用 Nacos 进行服务注册和发现, 设置为 false 即可
+        server-addr: xxx:8848 # Nacos 服务器地址
+        # server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850 # Nacos 服务器地址
+        namespace: xxx
+
+
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.zty.interfaces.entity.*
+  global-config:
+    #数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ASSIGN_ID:"全局唯一ID (数字类型唯一ID)", ASSIGN_UUID:"全局唯一ID UUID";
+      id-type: assign_id
+    banner: false
+  #原生配置
+  configuration:
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+
+logging:
+  level:
+    com.zty.interfaces.mapper: debug
+
+dubbo:
+  cloud:
+    #配置订阅服务多个服务用,隔开,不配置默认订阅注册中心所有服务
+    subscribed-services: 'auth-service,interface-service,pay-service'
+  application:
+    name: interface-service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://xxx:8848
+    file: /registry/interface-dubbo-registry.properties
+  consumer:
+    timeout: 3000
+    check: false
+#  scan:
+#    base-packages: com.zty.auth.provider

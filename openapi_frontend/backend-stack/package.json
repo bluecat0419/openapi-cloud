@@ -1,0 +1,36 @@
+{
+  "name": "front-stack",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint:prettier": "npx prettier --write . \"src/**/*\""
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vueuse/core": "^10.1.2",
+    "axios": "^1.4.0",
+    "dayjs": "^1.11.7",
+    "element-plus": "^2.3.4",
+    "fuse.js": "^6.6.2",
+    "js-cookie": "^3.0.5",
+    "jsencrypt": "^3.3.2",
+    "mavon-editor": "3.0.0-beta",
+    "pinia": "^2.0.36",
+    "pinia-plugin-persistedstate": "^3.1.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.1.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "unplugin-auto-import": "^0.15.3",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.3.6",
+    "vite-plugin-svg-icons": "^2.0.1"
+  }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="openapi-file" />
+        <module name="openapi-common-core" />
+        <module name="openapi-client-sdk" />
+        <module name="openapi-email" />
+        <module name="openapi-interface" />
+        <module name="openapi-common-dubbo" />
+        <module name="openapi-common-redis" />
+        <module name="openapi-pay" />
+        <module name="openapi-auth" />
+        <module name="openapi-sms" />
+        <module name="openapi-gateway" />
+        <module name="openapi-mvc-config" />
+        <module name="openapi-api-service" />
+        <module name="openapi-common-rabbitmq" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="openapi-admin" target="1.8" />
+      <module name="openapi-interfaces" target="1.8" />
+      <module name="openapi-moudules" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="openapi-api-service" options="-parameters" />
+      <module name="openapi-auth" options="-parameters" />
+      <module name="openapi-client-sdk" options="-parameters" />
+      <module name="openapi-common" options="" />
+      <module name="openapi-common-core" options="-parameters" />
+      <module name="openapi-common-dubbo" options="-parameters" />
+      <module name="openapi-common-rabbitmq" options="-parameters" />
+      <module name="openapi-common-redis" options="-parameters" />
+      <module name="openapi-email" options="-parameters" />
+      <module name="openapi-file" options="-parameters" />
+      <module name="openapi-gateway" options="-parameters" />
+      <module name="openapi-interface" options="-parameters" />
+      <module name="openapi-modules" options="" />
+      <module name="openapi-mvc-config" options="-parameters" />
+      <module name="openapi-pay" options="-parameters" />
+      <module name="openapi-sms" options="-parameters" />
+    </option>
+  </component>
+</project>

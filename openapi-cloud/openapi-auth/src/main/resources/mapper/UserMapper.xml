@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zty.auth.mapper.UserMapper">
+
+    <sql id="selectParam">
+        id,username,real_name,gender,ava_url,email,mobile,status,access_key,secret_key
+    </sql>
+
+    <select id="getByUserName" resultType="com.zty.auth.entity.UserEntity">
+        select * from user where username=#{username}
+    </select>
+
+    <select id="getByPhone" resultType="com.zty.auth.entity.UserEntity">
+        select * from user
+        <where>
+            <if test="phone != null and phone != ''">
+                mobile = #{phone}
+            </if>
+        </where>
+    </select>
+
+    <select id="getById" resultType="com.zty.auth.entity.UserEntity">
+        select * from user where status=1 and id=#{id}
+    </select>
+
+    <select id="getByEmail" resultType="com.zty.auth.entity.UserEntity">
+        select * from user
+        <where>
+            <if test="email != null and email != ''">
+                email = #{email}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectByAccessKey" resultType="com.zty.auth.entity.UserEntity">
+        select
+        <include refid="selectParam"></include>
+        from user where access_key = #{accessKey} and status = 1
+    </select>
+
+    <select id="checkAccessKey" resultType="integer">
+        select 1 from user where access_key=#{accessKey} limit 1
+    </select>
+
+</mapper>

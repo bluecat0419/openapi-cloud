@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/openapi-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-api-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-api-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-client-sdk/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-common/openapi-common-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-common/openapi-common-dubbo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-common/openapi-common-rabbitmq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-common/openapi-common-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-common/openapi-common-redis/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-common/openapi-mvc-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-modules/openapi-email/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-modules/openapi-file/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-modules/openapi-interface/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-modules/openapi-interface/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-modules/openapi-pay/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-modules/openapi-sms/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-modules/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-modules/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/openapi-moudules/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

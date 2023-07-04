@@ -1,0 +1,117 @@
+[
+  {
+    "id": "auth-service",
+    "predicates": [
+      {
+        "args": {
+          "pattern": "/cloud/auth-service/**"
+        },
+        "name": "Path"
+      }
+    ],
+    "uri": "lb://auth-service",
+    "filters": [
+      {
+        "name":"Auth"
+      },
+      {
+        "name": "StripPrefix",
+        "args": {
+          "parts": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "interface-service",
+    "predicates": [
+      {
+        "args": {
+          "pattern": "/cloud/interface-service/**"
+        },
+        "name": "Path"
+      }
+    ],
+    "uri": "lb://interface-service",
+    "filters": [
+      {
+        "name":"Auth"
+      },
+      {
+        "name": "StripPrefix",
+        "args": {
+          "parts": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "api-service",
+    "predicates": [
+      {
+        "args": {
+          "pattern": "/cloud/api-service/**"
+        },
+        "name": "Path"
+      }
+    ],
+    "uri": "lb://api-service",
+    "filters": [
+      {
+        "name":"ApiService"
+      },
+      {
+        "name": "StripPrefix",
+        "args": {
+          "parts": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "pay-service",
+    "predicates": [
+      {
+        "args": {
+          "pattern": "/cloud/pay-service/**"
+        },
+        "name": "Path"
+      }
+    ],
+    "uri": "lb://pay-service",
+    "filters": [
+      {
+        "name":"Auth"
+      },
+      {
+        "name": "StripPrefix",
+        "args": {
+          "parts": "1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "file-service",
+    "predicates": [
+      {
+        "args": {
+          "pattern": "/cloud/file-service/**"
+        },
+        "name": "Path"
+      }
+    ],
+    "uri": "lb://file-service",
+    "filters": [
+      {
+        "name":"Auth"
+      },
+      {
+        "name": "StripPrefix",
+        "args": {
+          "parts": "1"
+        }
+      }
+    ]
+  }
+]
