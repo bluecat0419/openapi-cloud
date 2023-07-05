@@ -4,7 +4,7 @@
 <mapper namespace="com.zty.interfaces.mapper.DocumentMapper">
 
     <select id="titleList" resultType="com.zty.interfaces.vo.DocumentTitleVO">
-        SELECT id,title FROM `document` ORDER BY sort ASC
+        SELECT id,title FROM `document` where is_deleted = 0 ORDER BY sort ASC
     </select>
 
 </mapper>
