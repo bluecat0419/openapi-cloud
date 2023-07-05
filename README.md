@@ -39,6 +39,7 @@ API详情页:
     SpringCloud
     SpringBoot
     Mybatis-Plus
+    Sentinel 
     Swagger 接口文档
     RabbitMQ 消息队列
     dubbo RPC调用
