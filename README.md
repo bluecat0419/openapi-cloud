@@ -1,11 +1,5 @@
 ## 项目简介
 
-历时两个月，利用空闲时间完成了我自己的 **openapi开放平台** ,包含用户端、后台管理
-
-
-在 **API开放平台** 基础的功能上新增了 **支付**、**订单**、**评论**、**文档**、**接口在线调试**、**OSS对象存储**、**短信/邮箱发送通知**等等...
-
-
 用户端登录页：
 ![用户端登录页](https://zhangtianyou.oss-cn-chengdu.aliyuncs.com/openapi/%E7%94%A8%E6%88%B7%E7%AB%AF%E7%99%BB%E5%BD%95%E9%A1%B5.png)
 
@@ -100,4 +94,4 @@ openapi-cloud
 
 GitHub：[openapi-cloud](https://github.com/bluecat0419/openapi-cloud)
 
-另外非常感谢 @[樊凡](https://gitee.com/fanxiao623)  @[KZ137onethe](https://github.com/KZ137onethe) 写的前端
+另外非常感谢 @[樊凡](https://gitee.com/fanxiao623)  @[KZ137onethe](https://github.com/KZ137onethe) 两位小伙伴写的前端
